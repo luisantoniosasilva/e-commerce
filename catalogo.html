@@ -18,10 +18,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="dist/InstagramFeed.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-
     <header>
         <div class="iframe">
             <iframe class="iframe_header" src="header.html" scrolling="no"></iframe>
@@ -29,32 +31,83 @@
     </header>
 
     <section>
-        <div class="conteiner my-5" style="padding-left: 15%; padding-right: 15%;">
-            <div class="card text-center">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col-sm">
-                            <img class="rounded-circle"
-                                src="https://scontent-for1-1.cdninstagram.com/v/t51.2885-19/s150x150/109012474_272046930747270_903755150161286215_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_ohc=I9sV3BTw-_YAX8VBiOa&oh=f239ee60afec261081d952db749635be&oe=5F532448"
-                                alt="Card image" width="100px" height="100px" style="float:left;"></div>
-                        <div class="col-sm" style="align-self: center">
-                            <h5 class="card-title" style="float:left;">Leonardo Ribeiro</h5>
-                        </div>
+        <div class="conteiner py-5" style="padding-left: 5%; padding-right: 5%;">
+            <div class="card text-center card-header conteiner_style">
+                <div class="row">
+                    <div class="col-sm-2 mt-4">
+                        <img class="rounded-circle profile_leonardoribeiro"
+                            src="https://scontent-for1-1.cdninstagram.com/v/t51.2885-19/s150x150/109012474_272046930747270_903755150161286215_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_ohc=I9sV3BTw-_YAX8VBiOa&oh=f239ee60afec261081d952db749635be&oe=5F532448"
+                            alt="Card image" width="150px" height="150px">
                     </div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="col-sm-10" id="insta_leonardoribeiro"></div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="conteiner py-5 " style="padding-left: 5%; padding-right: 5%;">
+            <div class="card text-center card-header conteiner_style">
+                <div class="row">
+                    <div class="col-sm-2 mt-4">
+                            <img class="rounded-circle profile_homemnobordado" src="./img/profile.png" alt="Card image" width="150px"
+                                height="150px">
+                    </div>
+                    <div class="col-sm-10" id="insta_homemnobordado"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="conteiner py-5 " style="padding-left: 5%; padding-right: 5%;">
+            <div class="card text-center card-header conteiner_style">
+                <div class="row">
+                    <div class="col-sm-2 mt-4">
+                            <img class="rounded-circle profile_m4ripos4s" src="./img/profile.png" alt="Card image" width="150px"
+                                height="150px">
+                    </div>
+                    <div class="col-sm-10" id="insta_m4ripos4s"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <footer>
         <div class="iframe">
             <iframe class="iframe_footer" src="footer.html" scrolling="no" height="80px"></iframe>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('.profile_leonardoribeiro').tooltip({ title: "Leonardo Ribeiro", placement: "right", trigger: "hover" });
+            $('.profile_homemnobordado').tooltip({ title: "Everton", placement: "right", trigger: "hover" });
+            $('.profile_m4ripos4s').tooltip({ title: "Ramana", placement: "right", trigger: "hover" });          
+        });
+
+        function instagram(username, user_id) {
+            new InstagramFeed({
+                'username': username,
+                'container': document.getElementById(user_id),
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'callback': null,
+                'styling': true,
+                'items': 5,
+                'items_per_row': 5,
+                'margin': 1,
+                'lazy_load': true,
+                'on_error': console.error
+            });
+        };
+        instagram("psi.leonardoribeiro", "insta_leonardoribeiro");
+        instagram("homemnobordado", "insta_homemnobordado");
+        instagram("m4ripos4s", "insta_m4ripos4s");
+    </script>
 </body>
 
 </html>

@@ -34,3 +34,11 @@
     padding: 0;
     display: block;
 }
+
+body{
+    background-color: #f4e8d8;
+}
+
+.conteiner_style{
+    background-color: burlywood;
+}
