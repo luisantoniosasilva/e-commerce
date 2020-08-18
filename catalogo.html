@@ -8,84 +8,90 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/index.css'>
     <script src='./js/index.js'></script>
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="dist/InstagramFeed.min.js"></script>
     <script src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+
     <header>
         <div class="iframe">
             <iframe class="iframe_header" src="header.html" scrolling="no"></iframe>
         </div>
     </header>
 
-    <section>
-        <div class="conteiner py-5" style="padding-left: 5%; padding-right: 5%;">
-            <div class="card text-center card-header conteiner_style">
-                <div class="row">
-                    <div class="col-sm-2 mt-4">
-                        <img class="rounded-circle profile_leonardoribeiro"
-                            src="https://scontent-for1-1.cdninstagram.com/v/t51.2885-19/s150x150/109012474_272046930747270_903755150161286215_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_ohc=I9sV3BTw-_YAX8VBiOa&oh=f239ee60afec261081d952db749635be&oe=5F532448"
-                            alt="Card image" width="150px" height="150px">
-                    </div>
-                    <div class="col-sm-10" id="insta_leonardoribeiro"></div>
-                </div>
+    <div class="d-flex" id="wrapper">
+
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading side_title"></div>
+            <div class="list-group list-group-flush">
+                <a href="#leonardoribeiro" class="list-group-item list-group-item-action conteiner_style">Leonardo Ribeiro</a>
+                <a href="#homemnobordado" class="list-group-item list-group-item-action conteiner_style">Homem no Bordado</a>
+                <a href="#m4ripos4s"" class=" list-group-item list-group-item-action conteiner_style">Mariposas</a>
             </div>
         </div>
-    </section>
 
-    <section>
-        <div class="conteiner py-5 " style="padding-left: 5%; padding-right: 5%;">
-            <div class="card text-center card-header conteiner_style">
-                <div class="row">
-                    <div class="col-sm-2 mt-4">
-                            <img class="rounded-circle profile_homemnobordado" src="./img/profile.png" alt="Card image" width="150px"
-                                height="150px">
+        <div id="page-content-wrapper">
+            <section>
+                <div class="conteiner py-5" style="padding-left: 5%; padding-right: 5%;" id="leonardoribeiro">
+                    <div class="card text-center card-header conteiner_style">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img class="rounded-circle profile_leonardoribeiro"
+                                    src="https://scontent-for1-1.cdninstagram.com/v/t51.2885-19/s150x150/109012474_272046930747270_903755150161286215_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_ohc=I9sV3BTw-_YAX8VBiOa&oh=f239ee60afec261081d952db749635be&oe=5F532448"
+                                    alt="Card image" width="150px" height="150px">
+                            </div>
+                            <div class="col-sm-10" id="insta_leonardoribeiro"></div>
+                        </div>
                     </div>
-                    <div class="col-sm-10" id="insta_homemnobordado"></div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section>
-        <div class="conteiner py-5 " style="padding-left: 5%; padding-right: 5%;">
-            <div class="card text-center card-header conteiner_style">
-                <div class="row">
-                    <div class="col-sm-2 mt-4">
-                            <img class="rounded-circle profile_m4ripos4s" src="./img/profile.png" alt="Card image" width="150px"
-                                height="150px">
+            <section>
+                <div class="conteiner py-5 " style="padding-left: 5%; padding-right: 5%;" id="homemnobordado">
+                    <div class="card text-center card-header conteiner_style">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img class="rounded-circle profile_homemnobordado" src="./img/profile.png"
+                                    alt="Card image" width="150px" height="150px">
+                            </div>
+                            <div class="col-sm-10" id="insta_homemnobordado"></div>
+                        </div>
                     </div>
-                    <div class="col-sm-10" id="insta_m4ripos4s"></div>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <div class="conteiner py-5 " style="padding-left: 5%; padding-right: 5%;" id="m4ripos4s">
+                    <div class="card text-center card-header conteiner_style">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img class="rounded-circle profile_m4ripos4s" src="./img/profile.png" alt="Card image"
+                                    width="150px" height="150px">
+                            </div>
+                            <div class="col-sm-10" id="insta_m4ripos4s"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-
-
-    <footer>
-        <div class="iframe">
-            <iframe class="iframe_footer" src="footer.html" scrolling="no" height="80px"></iframe>
-        </div>
-    </footer>
+    </div>
 
     <script>
         $(document).ready(function () {
             $('.profile_leonardoribeiro').tooltip({ title: "Leonardo Ribeiro", placement: "right", trigger: "hover" });
             $('.profile_homemnobordado').tooltip({ title: "Everton", placement: "right", trigger: "hover" });
-            $('.profile_m4ripos4s').tooltip({ title: "Ramana", placement: "right", trigger: "hover" });          
+            $('.profile_m4ripos4s').tooltip({ title: "Ramana", placement: "right", trigger: "hover" });
         });
 
         function instagram(username, user_id) {
@@ -108,6 +114,7 @@
         instagram("homemnobordado", "insta_homemnobordado");
         instagram("m4ripos4s", "insta_m4ripos4s");
     </script>
+
 </body>
 
 </html>
